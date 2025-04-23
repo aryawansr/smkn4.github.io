@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMK Negeri 4 Kota Bengkulu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #005b96;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #003f63;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .banner-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .banner-text p {
+      font-size: 1.2rem;
+      margin: 5px 0;
+    }
+
+    .banner-text h2, .banner-text p {
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      width: 30%;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .berita-item {
+      background: #f2f2f2;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header dan Navigasi -->
+  <header>
+    <h1>SMK Negeri 4 Kota Bengkulu</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#dokumentasi">Dokumentasi</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner" id="home">
+    <img src="logo.jpeg" alt="Banner SMKN 4 Kota Bengkulu" />
+    <div class="banner-text">
+      <h2>Selamat Datang di Website Resmi</h2>
+      <p>SMK Negeri 4 Kota Bengkulu</p>
+      <p>Mencetak Generasi Unggul, Siap Kerja & Berakhlak Mulia</p>
+    </div>
+  </section>
+
+  <!-- Berita -->
+  <section id="berita" class="section">
+    <h2>Berita Terkini</h2>
+    <div id="news-container"></div>
+  </section>
+
+  <!-- Profil Sekolah -->
+  <section id="profil" class="section">
+    <h2>Profil Sekolah</h2>
+    <h3>Visi & Misi</h3>
+    <p><strong>Visi:</strong> Menjadi SMK unggul berbasis teknologi dan berwawasan global.</p>
+    <p><strong>Misi:</strong></p>
+    <ul>
+      <li>Meningkatkan mutu pendidikan dan pelatihan kejuruan</li>
+      <li>Mengembangkan karakter peserta didik</li>
+    </ul>
+    <h3>Kurikulum</h3>
+    <p>Kurikulum SMKN 4 mengacu pada Kurikulum Merdeka dan kebutuhan Dunia Usaha & Industri (DUDI).</p>
+  </section>
+
+  <!-- Dokumentasi -->
+  <section id="dokumentasi" class="section">
+    <h2>Dokumentasi Kegiatan</h2>
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Kegiatan 1" />
+      <img src="foto2.jpg" alt="Kegiatan 2" />
+      <img src="foto3.jpg" alt="Kegiatan 3" />
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="section">
+    <h2>Kontak Kami</h2>
+    <p><strong>Alamat:</strong> Jl. Enggano, Ps. Bengkulu, Kec. Sungai Serut, Kota Bengkulu</p>
+    <p><strong>Email:</strong> smkn4kotabengkulu1@gmail.com</p>
+    <p><strong>No. Telp:</strong> (0736) 20286</p>
+    <iframe src="https://maps.google.com/maps?q=smkn%204%20bengkulu&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SMK Negeri 4 Kota Bengkulu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const newsContainer = document.getElementById("news-container");
+
+      const berita = [
+        {
+          judul: "PPDB 2025 Telah Dibuka",
+          isi: "Pendaftaran siswa baru telah resmi dibuka mulai 10 Juni 2025."
+        }
+      ];
+
+      berita.forEach(item => {
+        const div = document.createElement("div");
+        div.classList.add("berita-item");
+        div.innerHTML = `<h3>${item.judul}</h3><p>${item.isi}</p>`;
+        newsContainer.appendChild(div);
+      });
+    });
+  </script>
+
+</body>
+</html>
